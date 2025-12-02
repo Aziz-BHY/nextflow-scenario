@@ -1,0 +1,22 @@
+{
+    "name": "",
+    "description": "",
+    "command": "${INPUT_DATA_TRAIN} ${OUTPUT_MODEL}",
+    "harbor_url": "",
+    "parameters": [
+        {
+            "name": "input data file",
+            "description": "Path of the data used to train the model",
+            "variable_name": "INPUT_DATA_TRAIN",
+            "type": "input_file_1",
+            "editable": false
+        },
+        {
+            "name": "output model file",
+            "description": "Path of the output model",
+            "variable_name": "OUTPUT_MODEL",
+            "type": "output_file_1",
+            "editable": false
+        }
+    ]
+}

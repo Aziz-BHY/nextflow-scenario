@@ -1,0 +1,29 @@
+{
+    "name": "",
+    "description": "",
+    "command": "${INPUT_TEST_DATA} ${INPUT_MODEL} ${OUTPUT_DATA}",
+    "harbor_url": "",
+    "parameters": [
+        {
+            "name": "input data file",
+            "description": "Path of the data to test on the model",
+            "variable_name": "INPUT_TEST_DATA",
+            "type": "input_file_1",
+            "editable": false
+        },
+        {
+            "name": "input model file",
+            "description": "Path of the model",
+            "variable_name": "INPUT_MODEL",
+            "type": "input_file_2",
+            "editable": false
+        },
+        {
+            "name": "output evaluation file",
+            "description": "Path of the output file containing evaluation",
+            "variable_name": "OUTPUT_DATA",
+            "type": "output_file_1",
+            "editable": false
+        }
+    ]
+}
