@@ -1,0 +1,21 @@
+#!/usr/bin/env nextflow
+
+process userTest {
+    container = "{{ docker_image }}"
+
+    cpus {{ cpu_limit|default(2, true) }}
+    memory '{{ memory_limit|default("500 MB", true) }}'
+
+    input:
+        // input_file_1 is the path of the test data file
+        // input_file_2 is the path of the model generated previously
+        tuple val(index), path(input_file_1), path(input_file_2)
+
+    output:
+        tuple val(index), path("output_file_1_${index}") // TODO: change this path in the future
+                                                         // It's a hack to void filename collision
+"""
+{{ command }}
+"""
+}
+
