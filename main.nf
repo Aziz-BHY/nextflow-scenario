@@ -11,7 +11,7 @@ process TEST_SLURM {
 
     script:
     """
-    echo "Hello from Slurm on host: $(hostname)" > hello.txt
+    echo "Hello from Slurm on host: hostname" > hello.txt
     """
 }
 
